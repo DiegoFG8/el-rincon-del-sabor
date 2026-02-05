@@ -1,52 +1,133 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <style>
-        body {
-            background-image: url("fondo.jpg"); /* Cambia por tu imagen */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;   /* Centra horizontalmente */
-            align-items: center;       /* Centra verticalmente */
-            flex-direction: column;    /* Coloca elementos uno debajo del otro */
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página 2 - El Rincón Del Sabor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffe0b2, #f8bbd0, #c5e1a5, #b3e5fc);
+      background-size: 400% 400%;
+      animation: fondoAnimado 15s ease infinite;
+      color: #4e342e;
+    }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px black; /* efecto para que resalte */
-        }
+    @keyframes fondoAnimado {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
 
-        .boton {
-            padding: 12px 25px;
-            font-size: 1.2em;
-            background-color: #e63946;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
+    /* Menú superior */
+    nav {
+      background-color: #6f4e37; /* café */
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .boton:hover {
-            background-color: #b5172f;
-        }
-    </style>
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      background-color: #ff80ab; /* rosa dona */
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffb74d; /* glaseado naranja */
+      transform: scale(1.1);
+    }
+
+    /* Contenedor principal */
+    .contenedor {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #6f4e37;
+      border-bottom: 4px dashed #ff80ab; /* estilo glaseado */
+      padding-bottom: 5px;
+    }
+
+    p, ul {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    /* Botón de regreso */
+    .boton {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, #ff80ab, #ffb74d, #81c784);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .boton:hover {
+      transform: scale(1.1);
+    }
+
+    /* Decoración tipo dona/café */
+    .decoracion {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+  </style>
 </head>
 <body>
-    <h1>El Rincón Del Sabor</h1>
-    <a href="pagina2.html" class="boton">Entrar al Rincon</a>
-</body>
+  <!-- Menú -->
+  <nav>
+    <a href="index.html" class="boton">Volver al Inicio</a>
+    <a href="Historia.html" class="boton">Nuestra Historia</a>
+    <a href="Servicios.html" class="boton">Servicios</a>
+    <a href="Producto.html" class="boton">Productos</a>
+    <a href="Buyer_Persona.html" class="boton">Buyer Persona</a>
 
+  </nav>
+
+  <!-- Contenido -->
+  <div class="contenedor">
+    <div class="decoracion">🍩 ☕ 🍩 ☕ 🍩 ☕</div>
+
+    <h2 id="mision">Misión</h2>
+    <p>Ofrecer una experiencia vibrante y deliciosa con donas de diferentes colores y sabores, acompañadas de cafés únicos que alegren cada momento.</p>
+
+    <h2 id="vision">Visión</h2>
+    <p>Ser reconocidos como el lugar más alegre y acogedor para disfrutar de donas creativas y cafés variados, creando un ambiente lleno de color y sabor.</p>
+
+    <h2 id="valores">Valores</h2>
+    <ul>
+      <li>🍩 Diversidad en sabores y colores.</li>
+      <li>☕ Pasión por el café en todas sus formas.</li>
+      <li>🌈 Alegría y creatividad en cada detalle.</li>
+      <li>🤝 Cercanía y respeto hacia nuestros clientes.</li>
+      <li>✨ Innovación constante en experiencias dulces.</li>
+    </ul>
+
+    <!-- Botón de regreso -->
+  </div>
+</body>
 </html>
