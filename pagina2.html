@@ -7,7 +7,8 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Comic Sans MS', sans-serif; /* quitamos cursiva */
+      font-style: normal; /* fuerza texto normal */
       background: linear-gradient(135deg, #ffe0b2, #f8bbd0, #c5e1a5, #b3e5fc);
       background-size: 400% 400%;
       animation: fondoAnimado 15s ease infinite;
@@ -39,6 +40,7 @@
       border-radius: 20px;
       background-color: #ff80ab; /* rosa dona */
       transition: transform 0.3s ease, background-color 0.3s ease;
+      font-style: normal; /* asegura que los enlaces no sean cursivos */
     }
 
     nav a:hover {
@@ -54,22 +56,26 @@
       background-color: rgba(255,255,255,0.9);
       border-radius: 20px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      font-style: normal; /* asegura texto normal */
     }
 
     h2 {
       color: #6f4e37;
       border-bottom: 4px dashed #ff80ab; /* estilo glaseado */
       padding-bottom: 5px;
+      font-style: normal;
     }
 
     p, ul {
       font-size: 1.1em;
       line-height: 1.6;
+      font-style: normal;
     }
 
     ul li {
       margin-bottom: 10px;
       font-size: 1.2em;
+      font-style: normal;
     }
 
     /* Botón de regreso */
@@ -83,6 +89,7 @@
       border-radius: 25px;
       font-weight: bold;
       transition: transform 0.3s ease;
+      font-style: normal;
     }
 
     .boton:hover {
@@ -94,6 +101,7 @@
       text-align: center;
       margin-bottom: 20px;
       font-size: 2em;
+      font-style: normal;
     }
   </style>
 </head>
@@ -101,9 +109,10 @@
   <!-- Menú -->
   <nav>
     <a href="index.html" class="boton">Volver al Inicio</a>
-    <a href="#mision">Misión</a>
-    <a href="#vision">Visión</a>
-    <a href="#valores">Valores</a>
+    <a href="Historia.html" class="boton">Nuestra Historia</a>
+    <a href="Servicios.html" class="boton">Servicios</a>
+    <a href="Producto.html" class="boton">Productos</a>
+    <a href="Buyer_Persona.html" class="boton">Buyer Persona</a>
   </nav>
 
   <!-- Contenido -->
@@ -124,8 +133,6 @@
       <li>🤝 Cercanía y respeto hacia nuestros clientes.</li>
       <li>✨ Innovación constante en experiencias dulces.</li>
     </ul>
-
-    <!-- Botón de regreso -->
   </div>
 </body>
 </html>
