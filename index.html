@@ -98,15 +98,50 @@
       margin-bottom: 30px;
     }
 
-    .btn-dona {
-      background: linear-gradient(45deg, #ff80ab, #ffb74d, #81c784, #64b5f6);
-      color: white;
-      font-size: 1.2rem;
-      padding: 12px 25px;
-      border-radius: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: none;
-    }
+.btn-dona {
+  background: linear-gradient(45deg, #ff80ab, #ffb74d, #81c784, #64b5f6);
+  background-size: 300% 300%; /* necesario para animar el gradiente */
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  animation: gradientMove 6s ease infinite; /* animación de colores */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover con efecto extra */
+.btn-dona:hover {
+  transform: scale(1.1) translateY(-3px); /* se mueve un poco hacia arriba */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Animación del gradiente */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Estilo animado para la barra de navegación --- */
+.navbar {
+  background: linear-gradient(90deg, #ffccbc, #f8bbd0, #c5e1a5, #b3e5fc);
+  background-size: 300% 300%;
+  border-radius: 10px;
+  animation: gradientMove 10s ease infinite; /* mismo efecto que el botón */
+}
+
+.nav-link {
+  color: #4e342e !important;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: #6f4e37 !important;
+}
 
     .btn-dona:hover {
       transform: scale(1.1);
@@ -118,24 +153,7 @@
       margin-bottom: 20px;
     }
 
-    /* Navbar pastel */
-    .navbar {
-      background: linear-gradient(90deg, #ffccbc, #f8bbd0, #c5e1a5, #b3e5fc);
-    }
-
-    .navbar-brand {
-      font-weight: bold;
-      color: #4e342e !important;
-    }
-
-    .nav-link {
-      color: #4e342e !important;
-      font-weight: 500;
-    }
-
-    .nav-link:hover {
-      color: #6f4e37 !important;
-    }
+   
   </style>
 </head>
 <body>
@@ -161,7 +179,7 @@
   <!-- Hero central con fondo radial -->
   <div class="container-fondo">
     <div class="overlay">
-      <div class="iconos">☕ 🍩 🌈 🍩 ☕</div>
+
       <h1>Bienvenido a El Rincón Del Sabor</h1>
       <p class="lead">Tu espacio, tu ritmo, tu café</p>
       <a href="pagina2.html" class="btn btn-dona">Entrar al Rincón</a>
