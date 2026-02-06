@@ -1,51 +1,174 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Rincón Del Sabor</title>
-    <style>
-        body {
-            background-image: url("fondo.jpg"); /* Cambia por tu imagen */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;   /* Centra horizontalmente */
-            align-items: center;       /* Centra verticalmente */
-            flex-direction: column;    /* Coloca elementos uno debajo del otro */
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Rincón Del Sabor</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Fondo con patrón radial */
+    .container-fondo {
+      width: 100%;
+      min-height: 100vh;
+      background: radial-gradient(
+          50% 50% at 100% 0,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50% at 0 100%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ) 38px 38px;
+      background-size: 76px 76px;
+      background-color: #ca3f3f;
+      display: flex;
+      flex-direction: column;
+    }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px black; /* efecto para que resalte */
-        }
+    /* Overlay para que el texto resalte */
+    .overlay {
+      background: rgba(255,255,255,0.8);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
 
-        .boton {
-            padding: 12px 25px;
-            font-size: 1.2em;
-            background-color: #e63946;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
+    h1 {
+      font-size: 3.5rem;
+      color: #6f4e37;
+      text-shadow: 2px 2px 5px #ffe0b2;
+      margin-bottom: 20px;
+    }
 
-        .boton:hover {
-            background-color: #b5172f;
-        }
-    </style>
+    p.lead {
+      font-size: 1.3rem;
+      color: #4e342e;
+      margin-bottom: 30px;
+    }
+
+    .btn-dona {
+      background: linear-gradient(45deg, #ff80ab, #ffb74d, #81c784, #64b5f6);
+      color: white;
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border-radius: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+    }
+
+    .btn-dona:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .iconos {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    /* Navbar pastel */
+    .navbar {
+      background: linear-gradient(90deg, #ffccbc, #f8bbd0, #c5e1a5, #b3e5fc);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #4e342e !important;
+    }
+
+    .nav-link {
+      color: #4e342e !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #6f4e37 !important;
+    }
+  </style>
 </head>
 <body>
-    <h1>El Rincón Del Sabor</h1>
-    <a href="pagina2.html" class="boton">Entrar al Rincon</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">☕ El Rincón Del Sabor 🍩</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="pagina2.html">Misión y Valores</a></li>
+          <li class="nav-item"><a class="nav-link" href="Historia.html">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="Producto.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="Buyer_Persona.html">Buyer Persona</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero central con fondo radial -->
+  <div class="container-fondo">
+    <div class="overlay">
+      <div class="iconos">☕ 🍩 🌈 🍩 ☕</div>
+      <h1>Bienvenido a El Rincón Del Sabor</h1>
+      <p class="lead">Tu espacio, tu ritmo, tu café</p>
+      <a href="pagina2.html" class="btn btn-dona">Entrar al Rincón</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
