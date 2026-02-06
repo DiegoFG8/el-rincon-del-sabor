@@ -7,19 +7,69 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* Fondo radial aplicado al body */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffe0b2, #f8bbd0, #c5e1a5, #b3e5fc);
-      background-size: 400% 400%;
-      animation: fondoAnimado 15s ease infinite;
       color: #4e342e;
-    }
-
-    @keyframes fondoAnimado {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+      background: radial-gradient(
+          50% 50% at 100% 0,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50% at 0 100%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ) 38px 38px;
+      background-size: 76px 76px;
+      background-color: #ca3f3f;
     }
 
     /* Navbar pastel animada */
@@ -118,6 +168,8 @@
   <div class="contenedor">
     <h2>Buyer Persona</h2>
 
+    <!-- Aquí van las cards de Remote Worker, Foodie Aesthetic y Coffee Purist -->
+     
     <!-- Remote Worker -->
     <div class="card">
       <div class="card-header">💻 El "Remote Worker"</div>
@@ -168,6 +220,9 @@
         <p><b>Frustración:</b> Café quemado, leche sobrecalentada o baristas que no conocen el producto que venden.</p>
       </div>
     </div>
+  </div>
+
+    <!-- (Puedes usar el mismo contenido que te pasé antes con las tarjetas) -->
   </div>
 
   <!-- Bootstrap JS -->
