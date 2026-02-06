@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - El Rincón Del Sabor</title>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', sans-serif; /* quitamos cursiva */
+      font-style: normal; /* fuerza texto normal */
+      background: linear-gradient(135deg, #ffe0b2, #f8bbd0, #c5e1a5, #b3e5fc);
+      background-size: 400% 400%;
+      animation: fondoAnimado 15s ease infinite;
+      color: #4e342e;
+    }
+
+    @keyframes fondoAnimado {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* Menú superior */
+    nav {
+      background-color: #6f4e37; /* café */
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      background-color: #ff80ab; /* rosa dona */
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      font-style: normal; /* asegura que los enlaces no sean cursivos */
+    }
+
+    nav a:hover {
+      background-color: #ffb74d; /* glaseado naranja */
+      transform: scale(1.1);
+    }
+
+    /* Contenedor principal */
+    .contenedor {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      font-style: normal; /* asegura texto normal */
+    }
+
+    h2 {
+      color: #6f4e37;
+      border-bottom: 4px dashed #ff80ab; /* estilo glaseado */
+      padding-bottom: 5px;
+      font-style: normal;
+    }
+
+    p, ul {
+      font-size: 1.1em;
+      line-height: 1.6;
+      font-style: normal;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      font-style: normal;
+    }
+
+    /* Botón de regreso */
+    .boton {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, #ff80ab, #ffb74d, #81c784);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+      font-style: normal;
+    }
+
+    .boton:hover {
+      transform: scale(1.1);
+    }
+
+    /* Decoración tipo dona/café */
+    .decoracion {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <!-- Menú -->
+  <!-- Menú -->
+  <nav>
+    <a href="index.html" class="boton">Volver al Inicio</a>
+    <a href="pagina2.html" class="boton">Mision Vision y Valores</a>
+    <a href="Historia.html" class="boton">Nuestra Historia</a>
+    <a href="Servicios.html" class="boton">Servicios</a>
+    <a href="Producto.html" class="boton">Productos</a>
+    <a href="Buyer_Persona.html" class="boton">Buyer Persona</a>
+  </nav>
+
+
+  <!-- Contenido -->
+  <div class="contenedor">
+    <div class="decoracion">☕ 🍩 💻</div>
+    <h2>Nuestros Servicios: Una Experiencia Diseñada para Ti</h2>
+    <p>
+      En El Rincón Del Sabor, no solo servimos café; creamos el entorno perfecto para que tu día fluya, 
+      ya sea que busques un momento de calma o el impulso necesario para tu jornada laboral.
+    </p>
+
+    <h3>Excelencia en Barra y Gastronomía</h3>
+    <p>Nuestra propuesta culinaria se basa en la calidad de los insumos y la maestría en la preparación:</p>
+    <ul>
+      <li><b>Barra de Especialidad:</b> Selección de granos premium preparados mediante métodos tradicionales (Expreso, Capuchino) y técnicas de extracción artesanal (V60, Chemex, Prensa Francesa).</li>
+      <li><b>Bebidas de Autor y Alternativas:</b> Matcha, Chai Latte, chocolates artesanales, infusiones botánicas, además de Frappés y Smoothies frutales.</li>
+      <li><b>Repostería y Panadería Gourmet:</b> Cruasanes, muffins, bagels y sándwiches artesanales, ideales para cualquier hora del día.</li>
+    </ul>
+
+    <h3>💻 Infraestructura para el Profesional Moderno</h3>
+    <ul>
+      <li><b>Conectividad de Alta Velocidad:</b> Wi-Fi simétrico gratuito de fibra óptica para videollamadas y transferencias de datos pesados.</li>
+      <li><b>Workstations Equipadas:</b> Mesas con puntos de carga y estaciones eléctricas para trabajar sin interrupciones.</li>
+      <li><b>Ambiente Productivo:</b> Espacios climatizados con música curada para fomentar concentración y bienestar.</li>
+    </ul>
+
+    <h3>El Valor de Nuestro Espacio</h3>
+    <p>
+      Cada rincón de nuestra cafetería ha sido diseñado pensando en el confort. 
+      La combinación de iluminación cálida, mobiliario ergonómico y decoración vanguardista convierte nuestro local en el tercer espacio ideal: entre tu hogar y tu oficina.
+    </p>
+  </div>
+</body>
+</html>
