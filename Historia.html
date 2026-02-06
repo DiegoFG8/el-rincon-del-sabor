@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuestra Historia - El Rincón Del Sabor</title>
-<style>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
     body {
       margin: 0;
-      font-family: 'Comic Sans MS', sans-serif; /* quitamos cursiva */
-      font-style: normal; /* fuerza texto normal */
+      font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #ffe0b2, #f8bbd0, #c5e1a5, #b3e5fc);
       background-size: 400% 400%;
       animation: fondoAnimado 15s ease infinite;
@@ -21,104 +22,89 @@
       100% {background-position: 0% 50%;}
     }
 
-    /* Menú superior */
-    nav {
-      background-color: #6f4e37; /* café */
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    /* Navbar pastel animada */
+    .navbar {
+      background: linear-gradient(90deg, #ffccbc, #f8bbd0, #c5e1a5, #b3e5fc);
+      background-size: 300% 300%;
+      border-radius: 10px;
+      animation: gradientMove 10s ease infinite;
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
+    .navbar-brand {
       font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 20px;
-      background-color: #ff80ab; /* rosa dona */
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      font-style: normal; /* asegura que los enlaces no sean cursivos */
+      color: #4e342e !important;
     }
 
-    nav a:hover {
-      background-color: #ffb74d; /* glaseado naranja */
+    .nav-link {
+      color: #4e342e !important;
+      font-weight: 500;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover {
       transform: scale(1.1);
+      color: #6f4e37 !important;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     /* Contenedor principal */
     .contenedor {
       max-width: 900px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 25px;
       background-color: rgba(255,255,255,0.9);
       border-radius: 20px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-      font-style: normal; /* asegura texto normal */
     }
 
     h2 {
       color: #6f4e37;
-      border-bottom: 4px dashed #ff80ab; /* estilo glaseado */
+      border-bottom: 4px dashed #ff80ab;
       padding-bottom: 5px;
-      font-style: normal;
+      text-align: center;
     }
 
-    p, ul {
+    p {
       font-size: 1.1em;
-      line-height: 1.6;
-      font-style: normal;
+      line-height: 1.8;
+      text-align: justify;
     }
 
-    ul li {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-      font-style: normal;
-    }
-
-    /* Botón de regreso */
-    .boton {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: linear-gradient(45deg, #ff80ab, #ffb74d, #81c784);
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: transform 0.3s ease;
-      font-style: normal;
-    }
-
-    .boton:hover {
-      transform: scale(1.1);
-    }
-
-    /* Decoración tipo dona/café */
     .decoracion {
       text-align: center;
       margin-bottom: 20px;
       font-size: 2em;
-      font-style: normal;
     }
   </style>
 </head>
 <body>
-  <!-- Menú -->
-  <nav>
-    <a href="index.html" class="boton">Volver al Inicio</a>
-    <a href="pagina2.html" class="boton">Mision Vision y Valores</a>
-    <a href="Historia.html" class="boton">Nuestra Historia</a>
-    <a href="Servicios.html" class="boton">Servicios</a>
-    <a href="Producto.html" class="boton">Productos</a>
-    <a href="Buyer_Persona.html" class="boton">Buyer Persona</a>
+  <!-- Navbar igual que las demás páginas -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">☕ El Rincón Del Sabor 🍩</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="pagina2.html">Misión y Valores</a></li>
+          <li class="nav-item"><a class="nav-link" href="Historia.html">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="Producto.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="Buyer_Persona.html">Buyer Persona</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- Contenido -->
   <div class="contenedor">
-    <div class="decoracion">📖 ☕ 🍩</div>
+    <div class="decoracion">📖 </div>
     <h2>Nuestra Historia</h2>
     <p>
       El Rincón del Sabor no nació de la nada; nació de un sueño compartido que, por un tiempo, se quedó guardado en un cajón. 
@@ -134,5 +120,8 @@
       con determinación, lo que estaba en un rincón puede convertirse en el lugar favorito de todos.
     </p>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
