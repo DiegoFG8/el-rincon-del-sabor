@@ -7,26 +7,75 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* Fondo radial aplicado al body */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffe0b2, #f8bbd0, #c5e1a5, #b3e5fc);
-      background-size: 400% 400%;
-      animation: fondoAnimado 15s ease infinite;
       color: #4e342e;
-    }
-
-    @keyframes fondoAnimado {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+      background: radial-gradient(
+          50% 50% at 100% 0,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50% at 0 100%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ),
+        radial-gradient(
+          50% 50%,
+          #ca3f3f 0% 5%,
+          #ffffff 6% 15%,
+          #ca3f3f 16% 25%,
+          #ffffff 26% 35%,
+          #ca3f3f 36% 45%,
+          #ffffff 46% 55%,
+          #ca3f3f 56% 65%,
+          #ffffff 66% 75%,
+          #ca3f3f 76% 85%,
+          #ffffff 86% 95%,
+          #0000 96%
+        ) 38px 38px;
+      background-size: 76px 76px;
+      background-color: #ca3f3f;
     }
 
     /* Navbar pastel animada */
     .navbar {
       background: linear-gradient(90deg, #ffccbc, #f8bbd0, #c5e1a5, #b3e5fc);
       background-size: 300% 300%;
-      border-radius: 10px;
       animation: gradientMove 10s ease infinite;
     }
 
@@ -54,9 +103,9 @@
 
     /* Contenedor principal */
     .contenedor {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
-      padding: 25px;
+      padding: 30px;
       background-color: rgba(255,255,255,0.9);
       border-radius: 20px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.3);
@@ -83,7 +132,7 @@
   </style>
 </head>
 <body>
-  <!-- Navbar igual que las demás páginas -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">☕ El Rincón Del Sabor 🍩</a>
@@ -104,19 +153,19 @@
 
   <!-- Contenido -->
   <div class="contenedor">
-    <div class="decoracion">📖 </div>
+    <div class="decoracion">📖 ☕ 🍩</div>
     <h2>Nuestra Historia</h2>
     <p>
-      El Rincón del Sabor no nació de la nada; nació de un sueño compartido que, por un tiempo, se quedó guardado en un cajón. 
+      El Rincón del Sabor no nació de la nada; nació de un sueño compartido que, por un tiempo, se quedó guardado en un cajón.  
       Lo que empezó como una emocionante idea en equipo terminó perdiendo fuerza, quedando oculta en el olvido del día a día.
     </p>
     <p>
-      Sin embargo, las grandes ideas nunca mueren si alguien decide creer en ellas. Decidí rescatar ese proyecto del rincón donde estaba empolvado, 
+      Sin embargo, las grandes ideas nunca mueren si alguien decide creer en ellas. Decidí rescatar ese proyecto del rincón donde estaba empolvado,  
       pero esta vez con una visión clara: dejar de ser solo un plan para convertirse en una empresa real.
     </p>
     <p>
-      Hoy, esa idea olvidada es un espacio vibrante donde la creatividad y el compromiso se sirven en cada taza. 
-      Tomé las piezas de aquel sueño y les di estructura, profesionalismo y toda la pasión necesaria para demostrar que, 
+      Hoy, esa idea olvidada es un espacio vibrante donde la creatividad y el compromiso se sirven en cada taza.  
+      Tomé las piezas de aquel sueño y les di estructura, profesionalismo y toda la pasión necesaria para demostrar que,  
       con determinación, lo que estaba en un rincón puede convertirse en el lugar favorito de todos.
     </p>
   </div>
