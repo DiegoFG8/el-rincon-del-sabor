@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyer Persona - El Rincón Del Sabor</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe0b2, #f8bbd0, #c5e1a5, #b3e5fc);
+      background-size: 400% 400%;
+      animation: fondoAnimado 15s ease infinite;
+      color: #4e342e;
+    }
+
+    @keyframes fondoAnimado {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* Navbar pastel animada */
+    .navbar {
+      background: linear-gradient(90deg, #ffccbc, #f8bbd0, #c5e1a5, #b3e5fc);
+      background-size: 300% 300%;
+      animation: gradientMove 10s ease infinite;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #4e342e !important;
+    }
+
+    .nav-link {
+      color: #4e342e !important;
+      font-weight: 500;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+      transform: scale(1.1);
+      color: #6f4e37 !important;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Contenedor principal */
+    .contenedor {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #6f4e37;
+      border-bottom: 4px dashed #ff80ab;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card-header {
+      background: linear-gradient(45deg, #ff80ab, #ffb74d, #81c784, #64b5f6);
+      background-size: 300% 300%;
+      animation: gradientMove 6s ease infinite;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .card-body p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">☕ El Rincón Del Sabor 🍩</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="pagina2.html">Misión y Valores</a></li>
+          <li class="nav-item"><a class="nav-link" href="Historia.html">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="Producto.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="Buyer_Persona.html">Buyer Persona</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="contenedor">
+    <h2>Buyer Persona</h2>
+
+    <!-- Remote Worker -->
+    <div class="card">
+      <div class="card-header">💻 El "Remote Worker"</div>
+      <div class="card-body">
+        <p><b>Descripción:</b> Este cliente busca una "oficina B". No le importa pagar un poco más por el café si el Wi-Fi es estable y el ambiente es inspirador.</p>
+        <p><b>Perfil:</b> Profesional independiente o empleado remoto (25-40 años).</p>
+        <p><b>Motivación:</b> Necesita salir de casa para concentrarse o tener reuniones casuales.</p>
+        <p><b>Qué valora:</b></p>
+        <ul>
+          <li>Muchos enchufes disponibles.</li>
+          <li>Música ambiental a volumen moderado.</li>
+          <li>Café de especialidad (le gusta la calidad, pero valora más el espacio).</li>
+        </ul>
+        <p><b>Frustración:</b> Wi-Fi lento o sillas incómodas diseñadas para que te vayas rápido.</p>
+      </div>
+    </div>
+
+    <!-- Foodie Aesthetic -->
+    <div class="card">
+      <div class="card-header">📸 La "Foodie Aesthetic"</div>
+      <div class="card-body">
+        <p><b>Descripción:</b> Ella va por la experiencia completa. El sabor importa, pero la presentación del plato y la decoración del local son vitales.</p>
+        <p><b>Perfil:</b> Estudiante o joven profesional (18-30 años), muy activa en Instagram y TikTok.</p>
+        <p><b>Motivación:</b> Descubrir lugares nuevos y compartir su estilo de vida en redes sociales.</p>
+        <p><b>Qué valora:</b></p>
+        <ul>
+          <li>Arte latte impecable.</li>
+          <li>Vajilla bonita y decoración "Pinterest".</li>
+          <li>Opciones de repostería artesanal o alternativas vegetales (leche de avena, opciones veganas).</li>
+        </ul>
+        <p><b>Frustración:</b> Iluminación pobre o comida que se ve bien pero no sabe a nada.</p>
+      </div>
+    </div>
+
+    <!-- Coffee Purist -->
+    <div class="card">
+      <div class="card-header">☕ El "Coffee Purist"</div>
+      <div class="card-body">
+        <p><b>Descripción:</b> Para él, la cafetería es un templo. No le interesa el Wi-Fi ni los pasteles llenos de azúcar; le interesa el origen del grano.</p>
+        <p><b>Perfil:</b> Conocedor de café (30-55 años).</p>
+        <p><b>Motivación:</b> Disfrutar de una taza de café técnica y perfectamente ejecutada.</p>
+        <p><b>Qué valora:</b></p>
+        <ul>
+          <li>Variedad de métodos de extracción (V60, Chemex, Aeropress).</li>
+          <li>Saber la trazabilidad del grano (finca, altura, proceso).</li>
+          <li>Poder charlar con el barista sobre el perfil de tueste.</li>
+        </ul>
+        <p><b>Frustración:</b> Café quemado, leche sobrecalentada o baristas que no conocen el producto que venden.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
