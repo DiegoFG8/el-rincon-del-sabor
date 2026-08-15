@@ -58,7 +58,7 @@
 
     /* Contenedor Ruleta */
     .contenedor-ruleta {
-      max-width: 600px;
+      max-width: 650px;
       margin: 40px auto;
       padding: 30px;
       background-color: rgba(255,255,255,0.95);
@@ -75,8 +75,8 @@
 
     .wheel-wrapper {
       position: relative;
-      width: 300px;
-      height: 300px;
+      width: 320px;
+      height: 320px;
       margin: 30px auto;
     }
 
@@ -94,6 +94,7 @@
       filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
     }
 
+    /* Ruleta dividida exactamente en 7 secciones (51.42deg cada una) */
     .wheel {
       width: 100%;
       height: 100%;
@@ -101,12 +102,13 @@
       border: 6px solid #ffffff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
       background: conic-gradient(
-        #ff80ab 0deg 60deg,
-        #ffb74d 60deg 120deg,
-        #81c784 120deg 180deg,
-        #64b5f6 180deg 240deg,
-        #ba68c8 240deg 300deg,
-        #ffd54f 300deg 360deg
+        #ff80ab 0deg 51.43deg,
+        #ffb74d 51.43deg 102.86deg,
+        #81c784 102.86deg 154.29deg,
+        #64b5f6 154.29deg 205.71deg,
+        #ba68c8 205.71deg 257.14deg,
+        #ffd54f 257.14deg 308.57deg,
+        #ff8a65 308.57deg 360deg
       );
       transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
     }
@@ -126,11 +128,38 @@
     .btn-girar:hover {
       transform: scale(1.05);
     }
+
+    .btn-girar:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Lista visual de premios debajo de la ruleta */
+    .premios-lista {
+      text-align: left;
+      margin-top: 25px;
+      background: #fff8e1;
+      padding: 15px 20px;
+      border-radius: 12px;
+      border: 2px dashed #ffb74d;
+    }
+
+    .premios-lista h5 {
+      color: #6f4e37;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .premios-lista ul {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 0.95em;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar idéntico al resto del sitio -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">☕ El Rincón Del Sabor 🍩</a>
@@ -160,7 +189,34 @@
       <div class="wheel" id="wheel"></div>
     </div>
 
-    <button class="btn-girar" onclick="spinWheel()">¡Girar Ahora!</button>
+    <button class="btn-girar" id="btnGirar" onclick="spinWheel()">¡Girar Ahora!</button>
+
+    <!-- Leyenda de Premios -->
+    <div class="premios-lista">
+      <h5>🎁 Premios disponibles:</h5>
+      <ul>
+        <li>🎉 ¡Consumo GRATIS!</li>
+        <li>☕ 3 cafés gratis para canjear en el mes</li>
+        <li>🍰 Rebanada de pastel gratis</li>
+        <li>🥤 Bebida de la casa gratis</li>
+        <li>🍹 2x1 en cualquier bebida</li>
+        <li>🏷️ 15% de descuento en la cuenta total</li>
+        <li>🔄 Vuelve mañana (Inténtalo de nuevo)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal para mostrar el premio -->
+  <div class="modal fade" id="premioModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4" style="border-radius: 20px;">
+        <div class="modal-body">
+          <h3 class="mb-3" style="color: #6f4e37;">🎉 ¡Resultado! 🎉</h3>
+          <p class="fs-4 fw-bold" id="premioTexto" style="color: #ca3f3f;"></p>
+          <button type="button" class="btn btn-secondary mt-3 rounded-pill px-4" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Bootstrap JS -->
@@ -169,12 +225,45 @@
   <script>
     let currentRotation = 0;
 
+    // Lista de los 7 premios ordenados en sentido de las agujas del reloj
+    const premios = [
+      "🎉 ¡Consumo GRATIS!",
+      "🔄 Vuelve mañana",
+      "🏷️ 15% de descuento en la cuenta total",
+      "🍹 2x1 en cualquier bebida",
+      "🥤 Bebida de la casa gratis",
+      "🍰 Rebanada de pastel gratis",
+      "☕ 3 cafés gratis para canjear en el mes"
+    ];
+
     function spinWheel() {
+      const btn = document.getElementById('btnGirar');
+      btn.disabled = true; // Desactivar botón mientras gira
+
+      // Generar giro aleatorio (mínimo 4 vueltas completas = 1440 grados)
       const randomDegree = Math.floor(Math.random() * 360) + 1440;
       currentRotation += randomDegree;
-      
+
       const wheel = document.getElementById('wheel');
       wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+      // Esperar a que finalice la animación (4 segundos)
+      setTimeout(() => {
+        // Calcular en qué sección cayó el puntero (arriba/0 grados)
+        const degreesModulo = currentRotation % 360;
+        const actualDegree = (360 - degreesModulo) % 360;
+        
+        // 360 grados / 7 premios = ~51.428 grados por sección
+        const index = Math.floor(actualDegree / (360 / 7));
+        const premioGanado = premios[index];
+
+        // Mostrar premio en ventana emergente (modal)
+        document.getElementById('premioTexto').innerText = premioGanado;
+        const premioModal = new bootstrap.Modal(document.getElementById('premioModal'));
+        premioModal.show();
+
+        btn.disabled = false; // Reorganizar botón
+      }, 4000);
     }
   </script>
 </body>
